@@ -1,1 +1,1 @@
-You cannot edit your bookmarks in Safari while they are syncing to iCloud.
+You cannot edit your Safari bookmarks while they are syncing to iCloud.
