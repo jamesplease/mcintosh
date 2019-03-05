@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
-import IconPlayArrow from 'materialish/icon-play-arrow';
 import './content.css';
 import formatDate from '../utils/format-date';
 
@@ -12,8 +11,6 @@ export default function Content({
   markdownUrl,
   isHomePage,
 }) {
-  const videoRef = useRef();
-  const [isPlaying, setIsPlaying] = useState(false);
   const [markdown, setMarkdown] = useState('');
 
   useEffect(() => {
@@ -33,8 +30,6 @@ export default function Content({
   const mediaUrl = `${pathPrefix}${relativeMediaUrl}`;
 
   const mediaContainerClass = `postContent_mediaContainer ${
-    isPlaying ? 'postContent_mediaContainer-playing' : ''
-  } ${
     hasImgMedia
       ? 'postContent_mediaContainer-img'
       : 'postContent_mediaContainer-video'
@@ -52,36 +47,13 @@ export default function Content({
         {hasVideoMedia && (
           <>
             <video
-              ref={videoRef}
               src={mediaUrl}
+              type="video/mp4"
               className={mediaClass}
               loop
               muted
-              onClick={() => {
-                if (
-                  videoRef.current &&
-                  typeof videoRef.current.play === 'function'
-                ) {
-                  if (!isPlaying) {
-                    setIsPlaying(true);
-                    videoRef.current.play();
-                  } else {
-                    setIsPlaying(false);
-                    videoRef.current.pause();
-                  }
-                }
-              }}
+              controls
             />
-            <div className="postContent_videoOverlay">
-              <div className="postContent_videoControl">
-                <IconPlayArrow
-                  className="postContent_videoPlayBtn"
-                  size="2.4rem"
-                  fill="#fff"
-                />
-                Tap to play
-              </div>
-            </div>
           </>
         )}
       </div>
