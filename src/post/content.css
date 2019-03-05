@@ -26,6 +26,18 @@
   font-weight: 700;
 }
 
+.postContent-standalone {
+  padding-top: 0;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 650px) {
+  .postContent-standalone {
+    padding: 25px;
+    margin-bottom: 3rem;
+  }
+}
+
 .postContent-standalone .postContent_header {
   font-size: 1.5rem;
 }
