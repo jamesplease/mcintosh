@@ -2,11 +2,11 @@ import React from 'react';
 import Header from './header';
 import Content from './content';
 
-export default function Post() {
+export default function Post({ title, content }) {
   return (
     <>
       <Header />
-      <Content />
+      <Content title={title} content={content} />
     </>
   );
 }
