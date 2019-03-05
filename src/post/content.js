@@ -86,9 +86,7 @@ export default function Content({
         )}
       </div>
       <h1 className="postContent_header">{title}</h1>
-      {markdown && (
-        <ReactMarkdown source={markdown} className="postContent_text" />
-      )}
+      <ReactMarkdown source={markdown} className="postContent_text" />
       <div className="postContent_publishDate">{formatDate(publishDate)}</div>
     </article>
   );

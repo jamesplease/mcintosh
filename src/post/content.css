@@ -10,7 +10,7 @@
   margin: 0;
   padding: 0;
   font-size: 1.125rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .postContent_text {
@@ -66,25 +66,6 @@
   color: #fff;
   font-size: 1.1rem;
 }
-
-/* .postContent_videoOverlay:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  background: #000;
-  pointer-events: none;
-  opacity: 0.5;
-} */
-
-/* .postContent_mediaContainer-playing:after {
-  opacity: 0;
-} */
 
 .postContent_publishDate {
   margin-top: 20px;

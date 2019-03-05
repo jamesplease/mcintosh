@@ -16,7 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "clean": "rimraf dist",
+    "clean": "rimraf build",
     "postbuild": "react-snap",
     "deploy": "npm run clean && npm run build && cd build && git init && git commit --allow-empty -m 'update book' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update book' && git push git@github.com:jamesplease/mcintosh gh-pages --force"
   },
