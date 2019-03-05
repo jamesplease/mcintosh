@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
+import classnames from 'classnames';
 import { Link } from 'react-router-dom';
 import './content.css';
 import formatDate from '../utils/format-date';
@@ -13,6 +14,7 @@ export default function Content({
   videoUrl,
   markdownUrl,
   isHomePage,
+  fixed,
 }) {
   const [markdown, setMarkdown] = useState('');
 
@@ -30,22 +32,16 @@ export default function Content({
   const relativeMediaUrl = hasImgMedia ? imgUrl : videoUrl;
   const mediaUrl = `${staticFilePrefix}post-media/${relativeMediaUrl}`;
 
-  const mediaContainerClass = `postContent_mediaContainer ${
-    hasImgMedia
-      ? 'postContent_mediaContainer-img'
-      : 'postContent_mediaContainer-video'
-  }`;
-  const mediaClass = `postContent_media ${
-    hasImgMedia ? 'postContent_img' : 'postContent_video'
-  }`;
-
-  const contentClass = `postContent ${
-    !isHomePage ? 'postContent_standalone' : ''
-  }`;
-
   return (
-    <article className={contentClass}>
-      <div className={mediaContainerClass}>
+    <article
+      className={classnames('postContent', {
+        'postContent-standalone': !isHomePage,
+      })}>
+      <div
+        className={classnames('postContent_mediaContainer', {
+          'postContent_mediaContainer-img': hasImgMedia,
+          'postContent_mediaContainer-video': hasVideoMedia,
+        })}>
         {hasImgMedia && (
           <img src={mediaUrl} alt="" className="postContent_media" />
         )}
@@ -54,7 +50,10 @@ export default function Content({
             <video
               src={mediaUrl}
               type="video/mp4"
-              className={mediaClass}
+              className={classnames('postContent_media', {
+                postContent_img: hasImgMedia,
+                postContent_video: hasVideoMedia,
+              })}
               loop
               muted
               controls
@@ -69,6 +68,7 @@ export default function Content({
           </Link>
         )}
         {!isHomePage && title}
+        {fixed === true && <div className="postContent_fixedStatus">Fixed</div>}
       </h1>
       <ReactMarkdown source={markdown} className="postContent_text" />
       <div className="postContent_publishDate">{formatDate(publishDate)}</div>
