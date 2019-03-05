@@ -10,6 +10,10 @@ export default [
     markdownUrl: samePageLink,
     published: true,
     publishDate: '2019-03-05',
+    fixed: false,
+    versions: {
+      ios: '12.1.4',
+    },
   },
   {
     title: 'Inconsistent Playlist Ordering',
@@ -18,6 +22,11 @@ export default [
     markdownUrl: playlistUrl,
     published: true,
     publishDate: '2019-03-05',
+    fixed: false,
+    versions: {
+      ios: '12.1.4',
+      macos: '10.14.3',
+    },
   },
   {
     title: 'Safari Bookmarks Syncing',
@@ -26,5 +35,9 @@ export default [
     markdownUrl: bookmarksSync,
     published: true,
     publishDate: '2019-03-05',
+    fixed: false,
+    versions: {
+      ios: '12.1.4',
+    },
   },
 ];
