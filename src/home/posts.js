@@ -7,14 +7,14 @@ const publishedPosts = data.filter(data => data.published);
 
 export default function Posts() {
   return (
-    <ul>
+    <div className="postsList">
       {publishedPosts.map(post => {
         return (
-          <li key={post.url}>
+          <article key={post.url} className="postContainer">
             <Link to={post.url}>{post.title}</Link>
-          </li>
+          </article>
         );
       })}
-    </ul>
+    </div>
   );
 }

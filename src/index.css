@@ -10,14 +10,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
   max-width: 630px;
   margin: 0 auto;
   font-size: 1.125rem;
   color: var(--fontColor);
 }
 
+html,
+body {
+  height: 100%;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
