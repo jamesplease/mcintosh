@@ -9,7 +9,7 @@ export default function Posts() {
   return (
     <div className="postsList">
       {publishedPosts.map(post => {
-        return <Content key={post.url} {...post} />;
+        return <Content key={post.url} {...post} isHomePage={true} />;
       })}
     </div>
   );

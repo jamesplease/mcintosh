@@ -17,8 +17,88 @@
   line-height: 1.75;
 }
 
-.postContent_img {
-  border-radius: 6px;
+.postContent_media {
   width: 100%;
+  display: block;
+}
+
+.postContent_video {
+  cursor: pointer;
+}
+
+.postContent_mediaContainer {
+  position: relative;
   margin-bottom: 1rem;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.postContent_mediaContainer-playing .postContent_videoOverlay {
+  opacity: 0;
+}
+
+.postContent_videoOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.postContent_videoPlayBtn {
+  margin-bottom: 10px;
+}
+
+.postContent_videoControl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(60, 60, 60, 0.85);
+  border-radius: 6px;
+  padding: 20px 30px;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+/* .postContent_videoOverlay:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  pointer-events: none;
+  opacity: 0.5;
+} */
+
+/* .postContent_mediaContainer-playing:after {
+  opacity: 0;
+} */
+
+.postContent_publishDate {
+  margin-top: 20px;
+  padding-top: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 0.875rem;
+  position: relative;
+}
+
+.postContent_publishDate:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  border-top: 1px solid #ddd;
+  width: 35px;
+  left: 0;
 }
