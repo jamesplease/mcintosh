@@ -9,6 +9,7 @@ footer a {
   font-size: 1rem;
   margin-right: 1.8rem;
   position: relative;
+  text-decoration: none;
 }
 
 footer a:after {

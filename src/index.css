@@ -1,6 +1,7 @@
 :root {
   --fontColor: #222;
   --accentColor: #c4131c;
+  --horizontalContentPadding: 1.25rem;
 }
 
 *,
@@ -17,6 +18,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
   max-width: 630px;
   margin: 0 auto;
   color: var(--fontColor);

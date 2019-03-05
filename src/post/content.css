@@ -1,9 +1,22 @@
 .postContent {
-  padding: 25px;
-  border: 1px solid #dfdfdf;
-  border-radius: 8px;
-  margin: 0 20px 3rem;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #dfdfdf;
+  border-right: 0;
+  border-left: 0;
+  padding: 2.5rem 20px;
+}
+
+.postContent:first-child {
+  border-top: 1px solid #dfdfdf;
+}
+
+@media (min-width: 650px) {
+  .postContent {
+    padding: 25px;
+    border: 1px solid #dfdfdf;
+    border-radius: 8px;
+    margin: 0 20px 3rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  }
 }
 
 .postContent_header {
