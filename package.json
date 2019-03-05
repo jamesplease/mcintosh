@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "classnames": "2.2.6",
+    "materialish": "0.17.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-markdown": "4.0.6",
