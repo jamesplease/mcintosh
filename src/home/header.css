@@ -1,9 +1,25 @@
 .blogHeader {
-  font-size: 3rem;
+  margin: 2rem 20px;
+  display: flex;
+}
+
+.blogHeader_text {
+  font-size: 2.75rem;
   font-weight: 900;
+  margin: 0;
+  padding: 0;
 }
 
 .blogHeader_link {
   color: var(--fontColor);
   text-decoration: none;
+}
+
+.blogHeader_logo {
+  width: 50px;
+  margin-right: 1rem;
+}
+
+.blogDescription {
+  padding: 0 20px;
 }
