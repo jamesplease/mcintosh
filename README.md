@@ -9,3 +9,7 @@ built into a static site using [React Snap](https://github.com/stereobooster/rea
 
 - `npm start`: Run the development server.
 - `npm run deploy`: Deploy the site.
+
+### Notes
+
+- Optimize PNG files using [https://tinypng.com/](tinypng.com).
