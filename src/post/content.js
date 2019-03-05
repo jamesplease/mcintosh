@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
+import { Link } from 'react-router-dom';
 import './content.css';
 import formatDate from '../utils/format-date';
 
 export default function Content({
   title,
+  url,
   publishDate,
   imgUrl,
   videoUrl,
@@ -38,8 +40,12 @@ export default function Content({
     hasImgMedia ? 'postContent_img' : 'postContent_video'
   }`;
 
+  const contentClass = `postContent ${
+    !isHomePage ? 'postContent_standalone' : ''
+  }`;
+
   return (
-    <article className="postContent">
+    <article className={contentClass}>
       <div className={mediaContainerClass}>
         {hasImgMedia && (
           <img src={mediaUrl} alt="" className="postContent_media" />
@@ -57,7 +63,14 @@ export default function Content({
           </>
         )}
       </div>
-      <h1 className="postContent_header">{title}</h1>
+      <h1 className="postContent_header">
+        {isHomePage && (
+          <Link to={url} className="postContent_headerLink">
+            {title}
+          </Link>
+        )}
+        {!isHomePage && title}
+      </h1>
       <ReactMarkdown source={markdown} className="postContent_text" />
       <div className="postContent_publishDate">{formatDate(publishDate)}</div>
     </article>

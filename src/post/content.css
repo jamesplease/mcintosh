@@ -26,6 +26,15 @@
   font-weight: 700;
 }
 
+.postContent_standalone .postContent_header {
+  font-size: 1.5rem;
+}
+
+.postContent_headerLink {
+  color: var(--textColor);
+  text-decoration: none;
+}
+
 .postContent_text {
   line-height: 1.75;
 }
