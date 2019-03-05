@@ -8,7 +8,7 @@ export default function Posts() {
     <ul>
       {data.map(post => {
         return (
-          <li>
+          <li key={post.url}>
             <Link to={post.url}>{post.title}</Link>
           </li>
         );

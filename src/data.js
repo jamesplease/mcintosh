@@ -1,12 +1,15 @@
+import somethingUrl from './content/2019-03-07-something.md';
+import playlistUrl from './content/2019-03-06-playlist-ordering.md';
+
 export default [
   {
     title: 'Something',
-    content: 'Something here',
     url: '/something',
+    markdownUrl: somethingUrl,
   },
   {
-    title: 'First Post',
-    content: 'Blah',
-    url: '/first-post',
+    title: 'Playlist Ordering',
+    url: '/playlist-ordering',
+    markdownUrl: playlistUrl,
   },
 ];
