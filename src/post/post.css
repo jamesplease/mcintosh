@@ -3,6 +3,7 @@
   text-decoration: none;
   color: var(--accentColor);
   display: flex;
+  font-weight: 500;
   align-items: center;
   margin-bottom: 2rem;
 }
