@@ -1,10 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './app.css';
+import List from './list';
+import Post from './post';
 
-class App extends Component {
-  render() {
-    return <div className="App">McIntosh Blog here</div>;
-  }
+export default function App() {
+  return (
+    <BrowserRouter>
+      <div className="app">
+        <Switch>
+          <Route path="/" exact component={List} />
+          <Route path="/post" exact component={Post} />
+        </Switch>
+      </div>
+    </BrowserRouter>
+  );
 }
-
-export default App;
