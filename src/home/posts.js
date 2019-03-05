@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 import './posts.css';
 import data from '../data';
 
+const publishedPosts = data.filter(data => data.published);
+
 export default function Posts() {
   return (
     <ul>
-      {data.map(post => {
+      {publishedPosts.map(post => {
         return (
           <li key={post.url}>
             <Link to={post.url}>{post.title}</Link>

@@ -8,13 +8,15 @@ import data from './data';
 const isProduction = process.env.NODE_ENV === 'production';
 const basename = isProduction ? '/mcintosh' : '/';
 
+const publishedPosts = data.filter(data => data.published);
+
 export default function App() {
   return (
     <BrowserRouter basename={basename}>
       <div className="app">
         <Switch>
           <Route path="/" exact component={Home} />
-          {data.map(post => {
+          {publishedPosts.map(post => {
             return (
               <Route
                 key={post.url}

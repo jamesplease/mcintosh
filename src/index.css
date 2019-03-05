@@ -1,3 +1,7 @@
+:root {
+  --fontColor: #222;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -9,6 +13,8 @@ body {
 
   max-width: 630px;
   margin: 0 auto;
+  font-size: 1.125rem;
+  color: var(--fontColor);
 }
 
 code {

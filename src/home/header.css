@@ -3,6 +3,7 @@
   font-weight: 900;
 }
 
-.blogDescription {
-  font-size: 1rem;
+.blogHeader_link {
+  color: var(--fontColor);
+  text-decoration: none;
 }

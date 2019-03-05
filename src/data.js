@@ -6,10 +6,12 @@ export default [
     title: 'Something',
     url: '/something',
     markdownUrl: somethingUrl,
+    published: false,
   },
   {
     title: 'Playlist Ordering',
     url: '/playlist-ordering',
     markdownUrl: playlistUrl,
+    published: true,
   },
 ];
