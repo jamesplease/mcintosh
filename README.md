@@ -9,8 +9,3 @@ built into a static site using [React Snap](https://github.com/stereobooster/rea
 
 - `npm start`: Run the development server.
 - `npm run deploy`: Deploy the site.
-
-### Notes
-
-- Always use relative URLs. This is because the development server is hosted at the root,
-  while the hosted app is not.

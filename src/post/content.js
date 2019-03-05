@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import { Link } from 'react-router-dom';
 import './content.css';
 import formatDate from '../utils/format-date';
+import staticFilePrefix from '../utils/static-file-prefix';
 
 export default function Content({
   title,
@@ -26,10 +27,8 @@ export default function Content({
   const hasImgMedia = typeof imgUrl !== 'undefined';
   const hasVideoMedia = typeof videoUrl !== 'undefined';
 
-  const pathPrefix = isHomePage ? './post-media/' : '../post-media/';
-
-  const relativeMediaUrl = imgUrl ? imgUrl : videoUrl;
-  const mediaUrl = `${pathPrefix}${relativeMediaUrl}`;
+  const relativeMediaUrl = hasImgMedia ? imgUrl : videoUrl;
+  const mediaUrl = `${staticFilePrefix}post-media/${relativeMediaUrl}`;
 
   const mediaContainerClass = `postContent_mediaContainer ${
     hasImgMedia
