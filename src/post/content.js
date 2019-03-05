@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
+import './content.css';
 
-export default function Content({ title, content, markdownUrl }) {
+export default function Content({ title, imgUrl, markdownUrl, isHomePage }) {
   const [markdown, setMarkdown] = useState('');
 
   useEffect(() => {
@@ -12,12 +13,15 @@ export default function Content({ title, content, markdownUrl }) {
       });
   }, []);
 
+  const imageUrl = !isHomePage ? `../${imgUrl}` : imgUrl;
+
   return (
-    <div>
-      <h1>{title}</h1>
+    <article className="postContent">
+      <img src={imageUrl} alt="" className="postContent_img" />
+      <h1 className="postContent_header">{title}</h1>
       {markdown && (
-        <ReactMarkdown source={markdown} className="guideContent_text" />
+        <ReactMarkdown source={markdown} className="postContent_text" />
       )}
-    </div>
+    </article>
   );
 }

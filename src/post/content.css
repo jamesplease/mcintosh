@@ -1,0 +1,24 @@
+.postContent {
+  padding: 25px;
+  border: 1px solid #dfdfdf;
+  border-radius: 8px;
+  margin: 0 20px 3rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+.postContent_header {
+  margin: 0;
+  padding: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.postContent_text {
+  line-height: 1.75;
+}
+
+.postContent_img {
+  border-radius: 6px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
