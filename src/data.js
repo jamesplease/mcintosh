@@ -9,7 +9,7 @@ export default [
     videoUrl: 'books-same-page-link.mp4',
     markdownUrl: samePageLink,
     published: true,
-    publishDate: '2019-03-06',
+    publishDate: '2019-03-05',
   },
   {
     title: 'Inconsistent Playlist Ordering',
@@ -17,7 +17,7 @@ export default [
     imgUrl: 'playlist-ordering.png',
     markdownUrl: playlistUrl,
     published: true,
-    publishDate: '2019-03-06',
+    publishDate: '2019-03-05',
   },
   {
     title: 'Safari Bookmarks Syncing',
@@ -25,6 +25,6 @@ export default [
     imgUrl: 'safari-bookmarks-syncing.png',
     markdownUrl: bookmarksSync,
     published: true,
-    publishDate: '2019-03-06',
+    publishDate: '2019-03-05',
   },
 ];
