@@ -7,7 +7,7 @@ export default function Header() {
     <>
       <header className="blogHeader">
         <Link to="/" className="blogHeader_link">
-          <img src="/logo.png" alt="McIntosh" className="blogHeader_logo" />
+          <img src="./logo.png" alt="McIntosh" className="blogHeader_logo" />
         </Link>
         <h1 className="blogHeader_text">
           <Link to="/" className="blogHeader_link">
