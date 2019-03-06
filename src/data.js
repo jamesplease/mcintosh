@@ -1,8 +1,21 @@
-import playlistUrl from './content/2019-03-06-playlist-ordering.md';
-import samePageLink from './content/2019-03-06-books-same-page-link.md';
-import bookmarksSync from './content/2019-03-06-safari-bookmarks-syncing.md';
+import playlistUrl from './content/2019-03-05-playlist-ordering.md';
+import samePageLink from './content/2019-03-05-books-same-page-link.md';
+import bookmarksSync from './content/2019-03-05-safari-bookmarks-syncing.md';
+import stocksErrorMsgFormat from './content/2019-03-12-stocks-error-message-formatting.md';
 
 export default [
+  {
+    title: 'Stocks Error Message Formatting',
+    url: '/stocks-error-message-formatting',
+    videoUrl: 'stocks-error-msg.mp4',
+    markdownUrl: stocksErrorMsgFormat,
+    published: true,
+    publishDate: '2019-03-12',
+    fixed: false,
+    versions: {
+      ios: '12.1.4',
+    },
+  },
   {
     title: 'Books Same Page Link',
     url: '/books-same-page-link',
