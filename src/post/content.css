@@ -118,3 +118,14 @@
   font-size: 0.875rem;
   padding: 5px 8px;
 }
+
+.postContent_softwareVersion {
+  font-size: 0.8125rem;
+  border: 1px solid #a0a0a0;
+  color: #666;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 5px 6px;
+  display: inline-block;
+  margin-right: 7px;
+}

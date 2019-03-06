@@ -15,6 +15,7 @@ export default function Content({
   markdownUrl,
   isHomePage,
   fixed,
+  versions,
 }) {
   const [markdown, setMarkdown] = useState('');
 
@@ -31,6 +32,16 @@ export default function Content({
 
   const relativeMediaUrl = hasImgMedia ? imgUrl : videoUrl;
   const mediaUrl = `${staticFilePrefix}post-media/${relativeMediaUrl}`;
+
+  const versionsDoc = Object.keys(versions).map(key => {
+    const version = versions[key];
+
+    return (
+      <div className="postContent_softwareVersion" key={key}>
+        {key === 'ios' ? 'iOS' : 'macOS'} {version}
+      </div>
+    );
+  });
 
   return (
     <article
@@ -71,6 +82,7 @@ export default function Content({
         {fixed === true && <div className="postContent_fixedStatus">Fixed</div>}
       </h1>
       <ReactMarkdown source={markdown} className="postContent_text" />
+      {versionsDoc}
       <div className="postContent_publishDate">{formatDate(publishDate)}</div>
     </article>
   );
