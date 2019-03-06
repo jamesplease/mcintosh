@@ -9,13 +9,27 @@ import mapsInputVelocity from './content/2019-04-09-maps-input-velocity.md';
 import musicAddedToLibraryBug from './content/2019-04-16-music-added-to-library-bug.md';
 import smallAppSwitcher from './content/2019-04-23-small-app-switcher.md';
 import scrollPhysicsMarzipan from './content/2019-04-30-scroll-physics-marzipan.md';
+import offlineBehaviorNews from './content/2019-05-07-offline-behavior-in-news.md';
 
 export default [
+  {
+    title: 'Inconsistent Offline Behavior in News',
+    url: '/inconsistent-offline-behavior-in-news',
+    videoUrl: 'news-offline.mp4',
+    markdownUrl: offlineBehaviorNews,
+    published: true,
+    publishDate: '2019-05-07',
+    fixed: false,
+    versions: {
+      macos: '10.14.3',
+    },
+  },
   {
     title: 'Different Scroll Physics in "Marzipan" apps',
     url: '/different-scroll-physics-marzipan',
     markdownUrl: scrollPhysicsMarzipan,
     published: true,
+    fixed: false,
     publishDate: '2019-04-30',
     versions: {
       macos: '10.14.3',
