@@ -7,16 +7,27 @@ import photosAppIcon from './content/2019-03-26-photos-app-icon.md';
 import newsHighlightBug from './content/2019-04-02-news-highlight-bug.md';
 import mapsInputVelocity from './content/2019-04-09-maps-input-velocity.md';
 import musicAddedToLibraryBug from './content/2019-04-16-music-added-to-library-bug.md';
-import smallAppSwitcher from './content/2019-04-25-small-app-switcher.md';
+import smallAppSwitcher from './content/2019-04-23-small-app-switcher.md';
+import scrollPhysicsMarzipan from './content/2019-04-30-scroll-physics-marzipan.md';
 
 export default [
+  {
+    title: 'Different Scroll Physics in "Marzipan" apps',
+    url: '/different-scroll-physics-marzipan',
+    markdownUrl: scrollPhysicsMarzipan,
+    published: true,
+    publishDate: '2019-04-30',
+    versions: {
+      macos: '10.14.3',
+    },
+  },
   {
     title: 'Small App Switcher Apps',
     url: '/small-app-switcher-apps',
     videoUrl: 'app-switcher-scale.mp4',
     markdownUrl: smallAppSwitcher,
     published: true,
-    publishDate: '2019-04-25',
+    publishDate: '2019-04-23',
     versions: {
       ios: '12.1.4',
     },
