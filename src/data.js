@@ -2,8 +2,21 @@ import playlistUrl from './content/2019-03-05-playlist-ordering.md';
 import samePageLink from './content/2019-03-05-books-same-page-link.md';
 import bookmarksSync from './content/2019-03-05-safari-bookmarks-syncing.md';
 import stocksErrorMsgFormat from './content/2019-03-12-stocks-error-message-formatting.md';
+import calendarTransitionBug from './content/2019-03-19-calendar-transition-bug.md';
 
 export default [
+  {
+    title: 'Calendar Transition Bug',
+    url: '/calendar-transition-bug',
+    videoUrl: 'calendar-transition-bug.mp4',
+    markdownUrl: calendarTransitionBug,
+    published: true,
+    publishDate: '2019-03-19',
+    fixed: false,
+    versions: {
+      ios: '12.1.4',
+    },
+  },
   {
     title: 'Stocks Error Message Formatting',
     url: '/stocks-error-message-formatting',
