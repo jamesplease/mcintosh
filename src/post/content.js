@@ -12,6 +12,7 @@ export default function Content({
   publishDate,
   imgUrl,
   videoUrl,
+  videoPosterUrl,
   markdownUrl,
   isHomePage,
   fixed,
@@ -32,6 +33,7 @@ export default function Content({
 
   const relativeMediaUrl = hasImgMedia ? imgUrl : videoUrl;
   const mediaUrl = `${staticFilePrefix}post-media/${relativeMediaUrl}`;
+  const posterUrl = `${staticFilePrefix}post-media/${videoPosterUrl}`;
 
   const versionsDoc = Object.keys(versions).map(key => {
     const version = versions[key];
@@ -60,6 +62,7 @@ export default function Content({
           <>
             <video
               src={mediaUrl}
+              poster={posterUrl}
               type="video/mp4"
               className={classnames('postContent_media', {
                 postContent_img: hasImgMedia,
