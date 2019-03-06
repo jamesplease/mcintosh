@@ -5,8 +5,46 @@ import stocksErrorMsgFormat from './content/2019-03-12-stocks-error-message-form
 import calendarTransitionBug from './content/2019-03-19-calendar-transition-bug.md';
 import photosAppIcon from './content/2019-03-26-photos-app-icon.md';
 import newsHighlightBug from './content/2019-04-02-news-highlight-bug.md';
+import mapsInputVelocity from './content/2019-04-09-maps-input-velocity.md';
+import musicAddedToLibraryBug from './content/2019-04-16-music-added-to-library-bug.md';
+import smallAppSwitcher from './content/2019-04-25-small-app-switcher.md';
 
 export default [
+  {
+    title: 'Small App Switcher Apps',
+    url: '/small-app-switcher-apps',
+    videoUrl: 'app-switcher-scale.mp4',
+    markdownUrl: smallAppSwitcher,
+    published: true,
+    publishDate: '2019-04-25',
+    versions: {
+      ios: '12.1.4',
+    },
+  },
+  {
+    title: 'Music: Added to Library Alert Bug',
+    url: '/music-added-to-library-alert-bug',
+    videoUrl: 'music-added-to-library-bug.mp4',
+    markdownUrl: musicAddedToLibraryBug,
+    published: true,
+    publishDate: '2019-04-16',
+    fixed: false,
+    versions: {
+      ios: '12.1.4',
+    },
+  },
+  {
+    title: 'iPad Maps Input Swipe Bug',
+    url: '/maps-input-swipe-bug',
+    videoUrl: 'maps-input-velocity.mp4',
+    markdownUrl: mapsInputVelocity,
+    published: true,
+    publishDate: '2019-04-09',
+    fixed: false,
+    versions: {
+      ios: '12.1.4',
+    },
+  },
   {
     title: 'macOS News App Selection Bug',
     url: '/macos-news-app-selection-bug',

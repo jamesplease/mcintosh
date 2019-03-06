@@ -13,3 +13,4 @@ built into a static site using [React Snap](https://github.com/stereobooster/rea
 ### Notes
 
 - Optimize PNG files using [https://tinypng.com/](tinypng.com).
+- The [ffmpeg cheatsheet](https://github.com/jamesplease/ffmpeg-cheatsheet) can be useful for generating the videos.
