@@ -10,8 +10,9 @@ import musicAddedToLibraryBug from './content/2019-04-16-music-added-to-library-
 import smallAppSwitcher from './content/2019-04-23-small-app-switcher.md';
 import scrollPhysicsMarzipan from './content/2019-04-30-scroll-physics-marzipan.md';
 import offlineBehaviorNews from './content/2019-05-07-offline-behavior-in-news.md';
+import isVisiblePost from './utils/is-visible-post';
 
-export default [
+const data = [
   {
     title: 'Inconsistent Offline Behavior in News',
     url: '/inconsistent-offline-behavior-in-news',
@@ -156,3 +157,5 @@ export default [
     },
   },
 ];
+
+export default data.filter(isVisiblePost);

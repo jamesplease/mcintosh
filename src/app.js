@@ -4,12 +4,9 @@ import './app.css';
 import Home from './home/home';
 import Post from './post/post';
 import data from './data';
-import isVisiblePost from './utils/is-visible-post';
 
 const isProduction = process.env.NODE_ENV === 'production';
 const basename = isProduction ? '/mcintosh' : '/';
-
-const publishedPosts = data.filter(isVisiblePost);
 
 export default function App() {
   return (
@@ -17,7 +14,7 @@ export default function App() {
       <div className="app">
         <Switch>
           <Route path="/" exact component={Home} />
-          {publishedPosts.map(post => {
+          {data.map(post => {
             return (
               <Route
                 key={post.url}
