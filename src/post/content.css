@@ -9,6 +9,10 @@
   border-top: 1px solid #dfdfdf;
 }
 
+.postContent:last-child {
+  margin-bottom: 0;
+}
+
 @media (min-width: 650px) {
   .postContent {
     padding: 25px;
