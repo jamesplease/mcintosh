@@ -1,7 +1,27 @@
 :root {
   --fontColor: #222;
+  --backgroundColor: #fff;
   --accentColor: #c4131c;
+  --borderColor: #dfdfdf;
+  --boxShadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+
+  --versionTextColor: #666;
+  --versionBorderColor: #a0a0a0;
+
   --horizontalContentPadding: 1.25rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fontColor: #fff;
+    --borderColor: #404040;
+    --backgroundColor: #222;
+    --accentColor: #e25245;
+    --boxShadow: 0 1px 5px 0 rgba(0, 0, 0, 1);
+
+    --versionTextColor: #ccc;
+    --versionBorderColor: #999;
+  }
 }
 
 *,
@@ -27,6 +47,7 @@ body {
 html,
 body {
   height: 100%;
+  background-color: var(--backgroundColor);
 }
 
 code {
